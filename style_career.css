@@ -1,0 +1,140 @@
+ /* ======= CAREER PAGE ======= */
+    .career {
+        padding: 4rem 6rem;
+        text-align: center;
+    }
+
+    .career h1 {
+        color: var(--orange);
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+
+    .career-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .career-buttons .btn {
+        padding: 0.6rem 1.2rem;
+        background-color: var(--orange);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        border-radius: 30px;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .career-buttons .btn:hover {
+        background-color: #f8b37a; /* un peu plus clair au survol */
+        transform: scale(1.05);
+    }
+
+    /* Cadres pour les sections */
+    .career-section {
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+
+    .career-section.card {
+        background: rgba(247, 229, 217, 0.95);
+        padding: 1.5rem 2rem;
+        border-radius: 30px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .career-section h2 {
+        color: var(--orange);
+        font-family: "Playfair Display", serif;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+
+    /* Bouton LinkedIn externe (outline) */
+    .career-buttons .btn.btn-outline {
+        background-color: transparent;  /* fond transparent */
+        color: var(--orange);           /* texte orange */
+        border: 2px solid var(--orange); /* contour orange */
+        font-weight: 500;
+        border-radius: 30px;
+        transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .career-buttons .btn.btn-outline:hover {
+        background-color: var(--orange); /* fond orange au survol */
+        color: white; /* texte blanc au survol */
+        transform: scale(1.05);
+    }
+ /* Stage individuel dans Career */
+    .internship-card {
+      display: flex;
+      flex-direction: column; /* logo+titre en haut, texte en dessous */
+      align-items: flex-start;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap; /* pour responsive sur petit écran */
+    }
+
+    /* Logo + titre côte à côte */
+    .internship-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .internship-logo img {
+        width: 150px;
+        height: 5rem;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    /* Titre */
+    .internship-header h3 {
+      color: var(--orange);
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    .internship-text .card {
+        background: rgba(247, 229, 217, 0.95);
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        text-align: justify;
+        width: 100%;
+    }
+
+    .internship-text {
+        flex: 1;
+        text-align: justify;
+    }
+
+    .internship-text h3 {
+        color: var(--orange);
+        margin-bottom: 0.8rem; /* plus d’espace avant le cadre */
+        font-size: 1.4rem;
+    }
+
+    .internship-text p {
+        margin-bottom: 0.8rem;
+    }
+
+    .job-image {
+        display: block;
+        width: 100%;
+        max-width: 400px;   /* limite la taille de la photo */
+        margin: 1rem auto 0 auto; /* centre l’image et espace au-dessus */
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .job-image:hover {
+        transform: scale(1.03); /* petit zoom au survol */
+    }

@@ -1,0 +1,182 @@
+/* ================================
+    🎓 PAGE - ENGINEERING COURSES
+    ================================ */
+
+    .engineering {
+        padding: 4rem 3rem;
+        text-align: center;
+    }
+
+    .engineering h1 {
+        color: var(--orange);
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        margin-bottom: 0rem;
+    }
+
+    .education, .zeerpot {
+        /*box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05); /* ombre subtile */
+        padding: 0rem 3rem;
+        /*background: rgba(247, 229, 217, 0.95); */
+        border-radius: 50px;
+        margin-bottom: 1rem; /* espace avec la section suivante */
+
+    }
+
+    
+    .education h2, .zeerpot h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        color: var(--orange);
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+
+    .education .intro {
+        max-width: 100%;
+        margin-bottom: 3rem;
+        text-align: justify;
+    }
+
+    .semesters {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .semester {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .semester h3 {
+        color: var(--orange);
+        margin-bottom: 0.5rem;
+    }
+
+    .semester ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* Zeer pot section */
+    .zeer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .zeerpot p:first-of-type {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .zeer-image {
+        flex: 1;
+        display: flex;
+        flex-direction: column; /* empile image + texte verticalement */
+        align-items: center;    /* centre horizontalement image + texte */
+        text-align: center;     /* centre le texte multi-lignes */
+    }
+    .zeer-text {
+        flex: 3; /* prend deux tiers de l’espace restant */
+        text-align: justify;
+     }
+
+     .portfolio-text {
+        text-align: justify;
+     }
+
+    .zeer-text a {
+        display: inline-block;          /* pour pouvoir ajouter padding et margin */
+        padding: 0.3rem 0.8rem;         /* réduit la taille du bouton */
+        background-color: var(--orange);
+        color: white;
+        border-radius: 8px;
+        font-size: 0.9rem;              /* texte un peu plus petit */
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 1rem;
+        margin-left: auto;               /* pousse le bouton vers la droite */
+        transition: 0.3s;
+    }
+
+    .zeer-text a:hover {
+        background-color: #f8b37a; /* un orange légèrement plus clair au survol */
+        transform: scale(1.05);
+    }
+
+    .zeer-image img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        margin : 2rem;
+        margin-bottom: 2rem; /* espace entre image et texte */
+    }
+
+    .zeer-image img:hover {
+        transform: scale(1.05);
+    }
+    .zeer-video {
+        flex: 1;
+    }
+
+    .zeer-video .btn {
+        display: inline-block;
+        margin-top: 1rem;
+    }
+    .zeerpot-container {
+        display: flex;
+        flex-wrap: wrap; /* pour que ça reste responsive */
+        gap: 2rem;       /* espace entre image, barre et texte */
+        align-items: flex-start;
+    }
+
+    .zeer-image p {
+        margin: 0.5rem 0 0 0;  /* espace entre image et texte, supprime marge par défaut */
+        text-align: center;
+        color: var(--marron);
+    }
+
+    .zeer-text p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    .semesters.two-columns {
+        display: flex;
+        gap: 2rem; /* espace entre les colonnes */
+    }
+
+    .semester {
+        flex: 1; /* chaque semestre prend la moitié de la largeur */
+        position: relative;
+        padding-left: 20px; /* espace pour la ligne */
+    }
+
+    .semester .line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--orange);
+    }
+
+    .semester-content h3 {
+        margin-top: 0;
+        color: var(--orange);
+    }
+
+    .semester-content ul {
+        margin-top: 0.5rem;
+        padding-left: 1.5rem;
+        line-height: 1.6;
+    }
+

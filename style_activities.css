@@ -1,0 +1,62 @@
+ /* ======= OTHER ACTIVITIES ======= */
+    .activities {
+        padding: 4rem 6rem;
+        text-align: center;
+    }
+
+    .activities h1 {
+        color: var(--orange);
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .activities-container {
+      display: flex;
+      justify-content: space-around; /* espace équilibré entre les 3 cartes */
+      align-items: stretch;
+      flex-wrap: nowrap; /* ❌ empêche le retour à la ligne */
+      gap: 2rem;
+      margin: 0 auto;
+      max-width: 1200px; /* garde une belle mise en page centrée */
+    }
+    .activity-card {
+        flex: 1;
+        max-width: 350px; /* limite la largeur pour que tout rentre sur la ligne */
+        background: rgba(247, 229, 217, 0.95);
+        border-radius: 30px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+
+    .activity-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .activity-card h2 {
+        color: var(--marron);
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .activity-card p {
+        color: #4a3b36;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .activity-logo {
+        width: 80px;               /* taille du logo */
+        height: 80px;
+        object-fit: contain;       /* garde les proportions */
+        margin-bottom: 1rem;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)); /* petit relief */
+        transition: transform 0.3s ease;
+    }
+
+    .activity-logo:hover {
+        transform: scale(1.1);     /* léger zoom au survol */
+    }

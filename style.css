@@ -1,0 +1,217 @@
+
+    /* ================================
+       🎨 PALETTE DE COULEURS CHALEUREUSES
+    ================================= */
+    :root {
+      --rose: #f7b6b2;
+      --orange: #f8a986;
+      --marron: #8b5e3c;
+      --beige: #fff6f0;
+      --texte: #292424;
+    }
+
+    /* ================================
+       🌿 STYLE GLOBAL DU SITE
+    ================================= */
+    body {
+      margin: 0;
+      font-family: "Nunito", sans-serif; /*"Quicksand"*/
+      background-color: var(--beige);
+      color: var(--texte);
+      padding-left: 1rem;   /* réduit l’espace à gauche */
+      padding-right: 1rem;  /* réduit l’espace à droite */
+    }
+
+    /* ================================
+       🌸 EN-TÊTE (header)
+       Contient ton nom + barre de navigation
+    ================================= */
+    /*header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, var(--rose), var(--orange));
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }*/
+    header {
+      background-color: var(--beige); /* même fond que la page */
+      color: var(--texte); /* texte en noir ou presque */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    /* Nom à gauche */
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Liste des onglets à droite */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* Liens des onglets */
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: var(--texte);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    /* Effet soulignement fluide au survol */
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background-color: var(--orange);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Effet hover (au survol de la souris) */
+    nav a:hover {
+      color: var(--orange);
+    }
+
+
+    .card {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* cadre léger */
+        padding: 1.5rem 2rem;
+        background: rgba(247, 229, 217, 0.95);
+        border-radius: 30px;
+        margin-bottom: 2rem;
+        flex: 1;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    /* Conteneur des boutons */
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+ 
+       /* Boutons stylés */
+    .btn {
+        background-color: var(--orange);
+        color: white;
+        padding: 0.8rem 1rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease; /* ✅ animation douce */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background-color: #f8b37a; /* un peu plus clair au survol */
+      color: white;                    /* texte blanc au survol */
+      transform: scale(1.05);
+    }
+    .btn-outline {
+      background-color: transparent;  /* fond transparent */
+      color: var(--orange);           /* texte orange */
+      border: 2px solid var(--orange); /* contour orange */
+      font-weight: 500;
+      border-radius: 30px;
+      padding: 0.7rem 1.2rem;
+      text-decoration: none;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--orange); /* fond orange au survol */
+      color: white;                    /* texte blanc au survol */
+      transform: scale(1.05);
+    }
+
+@media (max-width: 900px) {
+
+  /* Tous les cadres principaux */
+  .destination-card,
+  .project-card,
+  .internship-card,
+  .activity-card,
+  .zeerpot,
+  .education,
+  .career-section.card {
+      padding: 0rem 0rem;  /* réduit le padding à gauche/droite */
+      margin: 0 auto 1rem auto; /* réduit les marges latérales et espace en bas */
+      width: 100%;        /* occupe toute la largeur disponible */
+      max-width: 100%;    /* supprime les limitations */
+  }
+
+  /* Paragraphes à l'intérieur des cadres */
+  .destination-text p,
+  .project-text p,
+  .internship-text p,
+  .zeer-text p,
+  .activity-card p,
+  .career-section p,
+  .zeerpot p,
+  .education .intro {
+      margin: 0 auto 0rem auto; /* centrage et espace en dessous */
+      max-width: 100%;          /* texte prend toute la largeur */
+      text-align: justify;
+  }
+
+}
+@media (max-width: 900px) {
+  nav ul {
+    display: flex !important;  /* force l’affichage du menu */
+    flex-wrap: wrap;           /* les onglets passent à la ligne si besoin */
+    justify-content: center;   /* centre le tout sur mobile */
+    overflow-x: auto;          /* permet de défiler si vraiment trop large */
+  }
+
+  nav ul li {
+    flex: 0 0 auto;
+    margin: 0.5rem;
+  }
+
+  header {
+    flex-direction: column; /* logo + menu en colonne sur petit écran */
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+    /* ================================
+       🔸 PIED DE PAGE
+    ================================= */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--marron);
+      font-size: 0.9rem;
+    }

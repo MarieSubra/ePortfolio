@@ -1,0 +1,122 @@
+/* ================================
+       🏠 SECTION PRINCIPALE : HOME
+       Contient la photo, le texte et les boutons
+    ================================= */
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 3rem 2rem;
+      gap: 0rem;
+      flex-wrap: wrap; /* Permet d’adapter l’affichage sur mobile */
+    }
+
+    /* Bloc gauche (photo + sous-titre) */
+    .left {
+      text-align: center;
+    }
+
+    /* Cercle contenant la photo */
+    .photo-container {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid var(--orange);
+        margin: 0 auto 1rem auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Ajustement de l’image dans le cercle */
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Nom sous la photo */
+    .name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--texte); /* même couleur que le texte principal */
+        margin-top: 1rem;
+    }
+    /* Texte sous la photo */
+    .subtitle {
+      font-weight: 500;
+      color: var(--texte);
+    }
+
+    /* Lien ENSEEIHT */
+    .subtitle a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    /* Bloc droit (texte principal) */
+    .right {
+      max-width: 500px;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Conteneur des boutons */
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+ /* ======= ABOUT ME SECTION ======= */
+.about-me {
+  padding: 3rem 3rem;
+  text-align: center;
+}
+
+.about-me h1 {
+  color: var(--orange);
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* pour que ça passe bien sur mobile */
+}
+
+/* Vidéo */
+.about-video video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-me {
+    padding: 2rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+

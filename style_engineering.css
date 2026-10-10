@@ -87,9 +87,24 @@
         text-align: justify;
      }
 
-     .portfolio-text {
-        text-align: justify;
-     }
+    .portfolio-text a {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background-color: var(--orange);
+        color: white;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: 0.3s;
+    }
+
+    .zeer-text a:hover,
+    .portfolio-text a:hover {
+        background-color: #f8b37a;
+        transform: scale(1.05);
+    }
 
     .zeer-text a {
         display: inline-block;          /* pour pouvoir ajouter padding et margin */
